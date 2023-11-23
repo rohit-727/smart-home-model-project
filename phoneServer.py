@@ -20,16 +20,16 @@ def read_data():
 
 @app.post("/api/post_data")
 def post_data(data: dict):
-    print(data)
     item = list(data.keys())
     match item[0]:
         case "GFL":
             print("Ground Floor")
-            if data['GFL']==False: print("off")#tns.write(6)
-            else: tns.write(7)
+            if data['GFL']==False: tns.write(b"6")
+            else: tns.write(b"7")
         case "FFL":
-            if data['FFL']==False: print("off") #tns.write(8)
-            else: print("on") #tns.write(9)
+            if data['FFL']==False: tns.write(b"8")
+            else: tns.write(b"9")
         case "newSpeed":
             print(f"New speed set to: {data['newSpeed']}")
+            tns.write(bytes(data['newSpeed']))
     return {"message": "Data received."}
