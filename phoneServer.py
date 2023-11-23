@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import telnetlib
 
-ss#tns = telnetlib.Telnet("127.0.0.1", 2323)
+tns = telnetlib.Telnet("127.0.0.1", 2323)
 app = FastAPI()
 
 # Cross-Origin Resource Sharing Config
