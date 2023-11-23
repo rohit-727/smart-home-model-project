@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Smart Home Controller 
+Model Smart Home Controller project as part of the Introduction to Engineering course in the first semester of Vellore Institute of Technology, Chennai Campus.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project involves the construction of a modern model house, fitted with lights and other appliances that are controlled by an Arduino Uno. This Arduino receives serial inputs from an Android device used to run the servers. The Android device is running a Termux session which implements a Linux-like environment. The backend hosts a web server that handles API calls using from the frontend React page.
 
-## Available Scripts
+# Tech Stack
+## Frontend
+* ReactJS
 
-In the project directory, you can run:
+## Backend
+* FastAPI
+* Uvicorn
+* Ngrok (for domain tunneling)
 
-### `npm start`
+# Building and Running
+First off,  clone and  `cd` into the directory using
+```
+cd smart-home-model-project
+```
+Following this, the npm packages can be installed using
+```
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The React front page can be built using
+```
+npm run build
+```
+or for a development environment
+```
+npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+As for the backend, uvicorn can be used to run the FastAPI server
+```
+python -m uvicorn phoneServer:app --reload
+```
 
-### `npm test`
+This hosts the server on `localhost:8000`
+The port can be domain tunneled using ngrok
+```
+ngrok http <domain> 8000
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+With this, both the frontend and backend should be up and running.
