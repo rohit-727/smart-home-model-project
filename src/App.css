@@ -5,22 +5,25 @@
 }
 
 html, body {
-  background-color: #24283b;
   width: 100%;
+  height: 100%;
   margin: 0;
 }
 
+body {
+  background-image:linear-gradient(to top right, #24283b, #343b58);
+}
 
 .App {
   display: flex;
   flex-direction: column;
-  transition: background-color 0.3s ease; /* Add transition for background-color change */
+  transition: background-color 0.3s ease, opacity 0.3s ease; /* Add transition for background-color change */
 }
 
 .title-bar{
   display: inline-block;
   font-style: bold;
-  background-color: #1f2335;
+  background-color: #22283d;
   color: #a9b1d6;
   padding: 20px;
   text-align: left;
@@ -37,7 +40,7 @@ html, body {
   width: 200px;
   height: 200px;
   color: #a9b1d6;
-  background-color: #1f2335;
+  background-color: #353c5c;
   border-radius: 30px;
   margin: 10px;
   padding: 15px;
@@ -88,7 +91,7 @@ html, body {
 }
 
 .button:hover {
-  background-color: #292e45;
+  background-color: #424b71;
   transform: scale(1.05);
 }
 
@@ -108,6 +111,12 @@ html, body {
   color: rgb(77, 77, 160)
 }
 
+.fanSpeedNum {
+  position: relative;
+  top: -16px;
+  left: 5px;
+  font-size: 40px;
+}
 
 input[type="range"] {
   appearance: none;

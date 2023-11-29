@@ -29,7 +29,7 @@ function FanButton({ label, icon, iconToggled, status, speedChange}) {
     onMouseEnter={() => setFanControlsVisible(true)}
     onMouseLeave={() => setFanControlsVisible(false)}>
       <div className="button-content">
-        <div className="button-icon">{status ? icon : iconToggled}</div>
+        <div className="button-icon">{status ? icon : iconToggled}<span className='fanSpeedNum'>{fanSpeed}</span></div>
         <div className="button-text">{label}</div>  
       </div>
       <FanControl fanSpeed={fanSpeed} onSpeedChange={handleFanSpeedChange}/>
