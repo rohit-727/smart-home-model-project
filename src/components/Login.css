@@ -1,0 +1,73 @@
+
+.loginDiv {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+    color: #a9b1d6;
+    font-size: 40px;
+    padding: 50px;
+  }
+  
+.loginDiv.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.inputLogin{
+    font-size: 20px;
+    padding-left: 15px;
+    margin-left: 50px;
+    border-radius: 30px;
+    border: 0px;
+    background-color: #1f2335;
+    color: #a9b1d6;
+    position: relative;
+    top: -5px;
+    width: 50%;
+    height: 40px;
+    display: inline;
+}
+
+.inputLogin.password {
+    margin-left: 63px;
+}
+
+.loginButton {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 45px;
+    font-size: 30px;
+    border: 0px;
+    color: #1f2335;
+    background-color: #a9b1d6;
+}
+
+.ErrorDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    overflow: hidden;
+    margin-top: 20px;
+    max-width: 600px;
+    background-color: #ff86ba;
+    color: #1f2335;
+    border-radius: 45px;
+}
+
+.circleExc {
+    padding: 7px;
+    display: flex;
+    flex-direction: row;
+}
+
+.ErrorText{
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 100%
+}
+
