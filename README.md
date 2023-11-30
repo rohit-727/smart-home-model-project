@@ -3,6 +3,10 @@ Model Smart Home Controller project as part of the Introduction to Engineering c
 
 The project involves the construction of a modern model house, fitted with lights and other appliances that are controlled by an Arduino Uno. This Arduino receives serial inputs from an Android device used to run the servers. The Android device is running a Termux session which implements a Linux-like environment. The backend hosts a web server that handles API calls using from the frontend React page.
 
+# Screenshots
+![image](https://github.com/rohit-a4s5/smart-home-model-project/assets/145858319/b5754317-a776-4da1-ac29-db5d1f785c87)
+![image](https://github.com/rohit-a4s5/smart-home-model-project/assets/145858319/a94bdf7a-70a6-4725-81f1-c14e0b8ede80)
+
 # Tech Stack
 ## Frontend
 * ReactJS
